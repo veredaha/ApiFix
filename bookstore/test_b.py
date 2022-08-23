@@ -20,13 +20,11 @@ def url(pytestconfig):
      return url
 @pytest.fixture
 def bookapi(url) ->accountApi:
- #url = "https://bookstore.toolsqa.com/BookStore/v1"
  api = BookStoreApi(url)
  return api
 
 @pytest.fixture
 def accounteapi(url) ->accountApi:
- #url = "https://bookstore.toolsqa.com/Account/v1/"
  api = accountApi(url)
  return api
 
