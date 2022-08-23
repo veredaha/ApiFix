@@ -18,20 +18,16 @@ def url(pytestconfig):
 
 @pytest.fixture
 def api(url) -> petApi:
- #url = "https://petstore3.swagger.io/api/v3"
  api = petApi(url)
  return api
 
 @pytest.fixture
 def storeapi(url) -> storeApi:
- #url = "https://petstore3.swagger.io/api/v3"
  api = storeApi(url)
  return api
 
 @pytest.fixture
 def userapi(url) -> petApi:
- #url = "https://petstore3.swagger.io/api/v3"
-
  api = userApi(url)
  return api
 
