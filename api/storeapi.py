@@ -65,14 +65,6 @@ class storeApi():
         res = self.session.delete(url=f"{self.url}store/order/{order_id}")
         return res
 
-url = "https://petstore3.swagger.io/api/v3"
-headrs ={'accept': 'application/json'}
-api = storeApi(url,headrs)
-o =Order(10, 198772, 7, "2022-08-02T16:07:44.983Z" ,"approved",True)  
-image = '/tmp/inflector7440998430605450804.tmp'
-r = api.delete_order_by_id(2)
-#@87fc90b8adc99582eb71d99a6b0c33b46935.jpg
-print(r)
 
 
 
