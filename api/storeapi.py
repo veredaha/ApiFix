@@ -26,8 +26,7 @@ class storeApi():
          """
         res = self.session.get(url=f"{self.url}store/inventory")
         if res.status_code == 200:
-         inventoey = res.json()
-         return inventoey 
+         return res.status_code
         else:
             return None
 
@@ -64,8 +63,6 @@ class storeApi():
           """
         res = self.session.delete(url=f"{self.url}store/order/{order_id}")
         return res
-
-
 
 
 
