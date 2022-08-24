@@ -110,12 +110,3 @@ class userApi():
         res = self.session.delete(url=f"{self.url}user/{name}")
         return res
 
-url = "https://petstore3.swagger.io/api/v3"
-headrs ={'accept': 'application/json'}
-api = userApi(url,headrs)
-o=User(10, 'vv', 'vered' ,'aha',"vered@gmail.com",'12345','0525332626',1) 
-u ='[{ "id": 10, "username": "theUser", "firstName": "John", "lastName": "James", "email": "john@email.com", "password": "12345", "phone": "12345",  "userStatus": 1 }, .\
-{ "id": 20, "username": "theUser", "firstName": "John", "lastName": "James", "email": "john@email.com", "password": "12345", "phone": "12345",  "userStatus": 1 }]'
-r = api.update_user(o,'vv')
-#@87fc90b8adc99582eb71d99a6b0c33b46935.jpg
-print(r)
