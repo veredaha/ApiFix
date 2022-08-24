@@ -123,11 +123,4 @@ class petApi():
             return None
 
 
-url = "https://petstore3.swagger.io/api/v3"
-headrs ={'accept': 'application/json'}
-api = petApi(url,headrs)
-pet = Pet(10, 'vv', None, None ,None,None)  
-image = '/tmp/inflector7440998430605450804.tmp'
-r = api.upload_image('@87fc90b8adc99582eb71d99a6b0c33b46935.jpg',10)
-#@87fc90b8adc99582eb71d99a6b0c33b46935.jpg
-print(r)
+
