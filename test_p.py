@@ -1,5 +1,6 @@
 import pytest
 import logging
+import allure
 from api.petapi import petApi
 from api.storeapi import storeApi
 from models.pet import Pet
@@ -18,16 +19,20 @@ def url(pytestconfig):
 
 @pytest.fixture
 def api(url) -> petApi:
+ #url = "https://petstore3.swagger.io/api/v3"
  api = petApi(url)
  return api
 
 @pytest.fixture
 def storeapi(url) -> storeApi:
+ #url = "https://petstore3.swagger.io/api/v3"
  api = storeApi(url)
  return api
 
 @pytest.fixture
 def userapi(url) -> petApi:
+ #url = "https://petstore3.swagger.io/api/v3"
+
  api = userApi(url)
  return api
 
@@ -155,10 +160,9 @@ def test_get_inventory(storeapi:storeApi,order:Order)->None:
  :returns:None
  """
     mylogger.info("test for getting inventory")
-    storebefore = storeapi.get_inventory()
     storeapi.place_order(order)
     store = storeapi.get_inventory()
-    assert len(store) == len(storebefore) + 1
+    assert store == 200
 
 
 def test_place_order(storeapi:storeApi,order:Order)->None:
