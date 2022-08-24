@@ -102,7 +102,4 @@ class BookStoreApi():
             return newisbn
      else:
             return None
-url = "https://bookstore.toolsqa.com/BookStore/v1"
-api = BookStoreApi(url)
-book = BookModal('123', 'vvv', 'aaa', "ana", '13/12/2014', 'kk', 200, 'hhh', 'aaaaa')
-api.get_books()
+
